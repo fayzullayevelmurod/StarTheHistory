@@ -547,4 +547,12 @@ span {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+.main_wrapper {
+  height: 140vh;
+}
+.main_wrapper .main_bg {
+  position: fixed;
+  top: 102px;
 }/*# sourceMappingURL=style.css.map */
