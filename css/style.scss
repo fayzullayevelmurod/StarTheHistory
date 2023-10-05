@@ -47,6 +47,12 @@ span{
     padding: 0 25px;
     margin: 0 auto;
 }
+body{
+    overflow-x: hidden;
+}
+.d-none{
+    display: none;
+}
 .main_wrapper{
     background-color: #000;
     position: relative;
@@ -164,6 +170,9 @@ span{
         display: flex;
         align-items: start;
         justify-content: space-between;
+        .trust_btn{
+            display: none;
+        }
     }
     .trust_card{
         margin: 0 5px;
@@ -182,6 +191,9 @@ span{
             line-height: normal;
             border-radius: 10px;
             background: #FFF;
+        }
+        .media_img{
+            display: none;
         }
         .card_img{
             width: 276px;
@@ -226,7 +238,7 @@ span{
     }
 }
 .offer{
-    padding-bottom: 141px;
+    // padding-bottom: 141px;
     background: #222;
     h2{
         padding-top: 101px;
@@ -362,9 +374,75 @@ span{
         }
     }
 }
+.accardion_top_block{
+    background: #222;
+    .accardion_top_block_in{
+        padding-top: 141px;
+        max-width: 3920px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .accardion_tape_top{
+        width: 100%;
+        transform: rotate(4deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        background: #FFF;
+        white-space: nowrap;
+        height: 118px;
+        p{
+            color: #000;
+            text-align: center;
+            font-family: $Suisse;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        img{
+            width: 17px;
+            height: 17px;
+        }
+    }
+    .accardion_tape_bottom{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        background: rgba(255, 255, 255, 0.50);
+        white-space: nowrap;
+        height: 118px;
+        p{
+            color: #000;
+            text-align: center;
+            font-family: $Suisse;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        img{
+            width: 17px;
+            height: 17px;
+        }
+    }
+}
 .accardion{
+    overflow: hidden;
+    padding-top: 50px;
     padding-bottom: 143px;
     background: #222;
+    .accardion_active{
+        .accardion_content{
+            display: block;
+        }
+    }
+    .accardion_content{
+        display: none;
+    }
     h2{
         padding-top: 142px;
         margin-bottom: 90px;
@@ -405,7 +483,7 @@ span{
         border: 2px solid rgba(255, 255, 255, 0.20);
         background: #1A1A1A;
         padding: 57px 47px;
-        height: 155px;
+        // height: 155px;
         p{
             max-width: 800px;
             color: #FFF;
@@ -458,7 +536,7 @@ span{
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
-                text-decoration-line: strikethrough;
+                text-decoration-line: line-through;
             }
             span{
                 width: 385px;
@@ -525,22 +603,27 @@ span{
                     outline: none;
                 }
             }
-            button{
-                border: none;
-                cursor: pointer;
-                border-radius: 19.888px;
-                background: #FF671B;
-                width: 240px;
-                height: 55px;
-                color: #FFF;
-                font-family: $Suisse;
-                font-size: 25px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
+            .contact_btn{
+                display: flex;
+                align-items: start;
+                button{
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 19.888px;
+                    background: #FF671B;
+                    width: 240px;
+                    height: 55px;
+                    color: #FFF;
+                    font-family: $Suisse;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
             }
         }
     }
 }
 
+@import 'responsive';
 @import '_animation.scss';
