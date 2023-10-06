@@ -67,3 +67,17 @@ getCommentStyleLeft();
 window.addEventListener("resize", function () {
     getCommentStyleLeft()
 })
+
+let menu = document.querySelector('.menu')
+let menu_close = document.querySelector('.menu .menu_close');
+let menu_open = document.querySelector('header .burger');
+
+menu_open.onclick = () => {
+    menu.classList.remove('noActive');
+    menu.classList.add('active');
+}
+
+menu_close.onclick = () => {
+    menu.classList.remove('active');
+    menu.classList.add('noActive');
+}

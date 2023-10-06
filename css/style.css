@@ -53,6 +53,78 @@ span {
   display: none;
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 5;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.menu .menu_close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  border-radius: 10px;
+  background: #F5F5F5;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu ul li {
+  color: #131313;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: -0.5px;
+}
+
+@keyframes menuActive {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.menu.active {
+  display: flex;
+  animation: menuActive 0.2s linear 1;
+}
+
+@keyframes menuNoActive {
+  0% {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    display: flex;
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}
+.menu.noActive {
+  display: none;
+  animation: menuNoActive 0.1s linear 1;
+}
+
 .main_wrapper {
   background-color: #000;
   position: relative;
@@ -1052,6 +1124,8 @@ span {
   .trust .trust_wrapper .trust_top .trust_card .card_number,
   .trust .trust_wrapper .trust_bottom .trust_card .card_number {
     margin: 0 auto 12px auto;
+    border-radius: 10px;
+    background: #F5F5F5;
   }
   .trust .trust_wrapper .trust_top .trust_card .media_img,
   .trust .trust_wrapper .trust_bottom .trust_card .media_img {
