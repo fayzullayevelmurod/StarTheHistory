@@ -1,24 +1,17 @@
-// var parallaxElement = document.getElementsByClassName('thumbnail');
+AOS.init();
+
 var parallaxElement = document.querySelector('.main_wrapper .main_bg');
 
-// // Scroll o'zgarishlarini kuzatish
 window.addEventListener('scroll', function() {
-    // Olingan scroll o'rtasida paytni aniqlash
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    // Paytning kattalash koefitsiyentini o'zgartirib ketish
-    var scale = 1 + (scrollTop / 300); // O'zgartirilishi kerak bo'lgan koefitsiyentni o'zingiz belgilang
-
-    // console.log(scrollTop / 1000);
-
-    // Elementni kattalashtirish
+    var scale = 1 + (scrollTop / 300);
     parallaxElement.style.transform = 'scale(' + scale + ')';
     parallaxElement.style.opacity = 1 - (scrollTop / 400);
 });
 
 let loop_slider = new Swiper(".loop_1", {
     slidesPerView: 'auto',
-    spaceBetween: 60,
+    spaceBetween: 24,
     loop: true,
     autoplay: {
         delay: 0,
@@ -26,6 +19,11 @@ let loop_slider = new Swiper(".loop_1", {
         disableOnInteraction: false,
     },
     speed: 10000,
+    breakpoints: {
+        650: {
+            spaceBetween: 60,
+        }
+    }
 });
 
 let loop_slider2 = new Swiper(".loop_2", {
@@ -43,7 +41,12 @@ let loop_slider2 = new Swiper(".loop_2", {
 
 let comment_slider = new Swiper(".comment_slider", {
     slidesPerView: 'auto',
-    spaceBetween: 32,
+    spaceBetween: 15,
+    breakpoints: {
+        650: {
+            spaceBetween: 32,
+        }
+    }
 });
 
 let com_slider = document.querySelector('.comment_slider_wrapper');
