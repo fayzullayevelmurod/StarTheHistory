@@ -980,9 +980,29 @@ span {
     position: relative;
     z-index: 1;
 
+    @keyframes accordionActive {
+        0% {
+            display: block;
+            height: 0px;
+            padding: 0 47px;
+            border: 0px solid rgba(255, 255, 255, 0.20);
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: 8px;
+            height: auto;
+            padding: 57px 47px;
+            border: 2px solid rgba(255, 255, 255, 0.20);
+        }
+    }
+
     .accardion_active {
         .accardion_content {
             display: block;
+            margin-top: 8px;
+            padding: 57px 47px;
+            animation: accordionActive .2s linear 1;
+            border: 2px solid rgba(255, 255, 255, 0.20);
         }
     }
 
@@ -1029,13 +1049,13 @@ span {
     }
 
     .accardion_content {
-        margin-top: 8px;
+        margin-top: 0px;
         border-radius: 20px;
-        border: 2px solid rgba(255, 255, 255, 0.20);
+        border: 0px solid rgba(255, 255, 255, 0.20);
         background: #1A1A1A;
-        padding: 57px 47px;
+        padding: 0 47px;
+        overflow: hidden;
 
-        // height: 155px;
         p {
             max-width: 800px;
             color: #FFF;

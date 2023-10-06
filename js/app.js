@@ -81,3 +81,13 @@ menu_close.onclick = () => {
     menu.classList.remove('active');
     menu.classList.add('noActive');
 }
+
+let accordions = document.querySelectorAll('.accardion .accardion_in');
+
+accordions.forEach(el => {
+    let btn = el.querySelector('.accardion_btn');
+
+    btn.onclick = () => {
+        el.classList.toggle('accardion_active')
+    }
+});
