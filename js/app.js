@@ -91,3 +91,24 @@ accordions.forEach(el => {
         el.classList.toggle('accardion_active')
     }
 });
+
+let modal_img_items = document.querySelectorAll('.comment_slider img');
+let modal_img = document.querySelector('.modal_img');
+let modal_close = document.querySelector('.modal_img .modal_close');
+let modal_img_el = document.querySelector('.modal_img img');
+
+if (modal_img_items.length) {
+    modal_img_items.forEach(el => {
+        let attr = el.getAttribute('src');
+
+        el.onclick = () => {
+            modal_img_el.setAttribute('src', attr);
+            modal_img.classList.add('active');
+        }
+
+        modal_close.onclick = () => {
+            modal_img_el.setAttribute('src', '');
+            modal_img.classList.remove('active');
+        }
+    })
+}

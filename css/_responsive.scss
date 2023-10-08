@@ -170,9 +170,11 @@
                     .card_img {
                         margin: 0 auto;
                         width: 214px;
+                        padding-bottom: 0;
 
                         img {
                             width: 100%;
+                            transform: scale(1.6);
                         }
                     }
                 }
@@ -259,7 +261,7 @@
                         font-family: "Suisse Intl", sans-serif;
                         font-size: 18px;
                         font-style: normal;
-                        font-weight: 400;
+                        font-weight: 600;
                         line-height: normal;
                         display: block;
                         margin-bottom: 1px;
@@ -529,13 +531,16 @@
                     font-style: normal;
                     font-weight: 600;
                     line-height: 35px;
+                    border-radius: 15px;
+                    margin-right: 0;
                 }
             }
 
             .main_content {
                 position: relative;
                 justify-content: space-between;
-                gap: 19px;
+                gap: 22px;
+                align-items: flex-start;
                 
                 .main_btn {
                     position: absolute;
@@ -544,6 +549,7 @@
                     transform: translateX(-50%);
                     width: 250px;
                     height: 55px;
+                    font-weight: 600;
                 }
 
                 p {
@@ -856,6 +862,14 @@
                     }
                 }
             }
+        }
+    }
+
+    .modal_img {
+        img {
+            height: 95%;
+            width: 95%;
+            object-fit: contain;
         }
     }
 }
