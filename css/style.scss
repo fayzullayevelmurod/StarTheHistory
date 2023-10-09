@@ -210,12 +210,13 @@ span {
             span {
                 padding: 5px 12px;
                 border-radius: 20px;
-                background: #FFF;
+                background: rgba(255, 255, 255, 0.9);
                 color: #000;
                 font-size: 46px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 57px;
+                margin-right: 5px;
                 /* 123.913% */
             }
         }
@@ -233,8 +234,12 @@ span {
                 font-family: $Suisse;
                 font-size: 16px;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 400;
                 line-height: normal;
+
+                span {
+                    font-weight: 600;
+                }
             }
 
             .main_text_right {

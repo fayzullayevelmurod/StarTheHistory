@@ -1,10 +1,15 @@
 AOS.init();
+let body = document.querySelector('body');
 
 var parallaxElement = document.querySelector('.main_wrapper .main_bg');
 
 window.addEventListener('scroll', function() {
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // console.log(body.offsetWidth);
     var scale = 1 + (scrollTop / 300);
+    if (body.offsetWidth < 576) {
+        scale = 1 + (scrollTop / 1000)
+    }
     parallaxElement.style.transform = 'scale(' + scale + ')';
     parallaxElement.style.opacity = 1 - (scrollTop / 400);
 });
@@ -51,7 +56,6 @@ let comment_slider = new Swiper(".comment_slider", {
 
 let com_slider = document.querySelector('.comment_slider_wrapper');
 let com_container = document.querySelector('.comment .main_container');
-let body = document.querySelector('body');
 
 function getCommentStyleLeft () {
     if (com_slider) {

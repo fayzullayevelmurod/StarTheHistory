@@ -181,12 +181,13 @@ span {
 .main_wrapper main h2 span {
   padding: 5px 12px;
   border-radius: 20px;
-  background: #FFF;
+  background: rgba(255, 255, 255, 0.9);
   color: #000;
   font-size: 46px;
   font-style: normal;
   font-weight: 600;
   line-height: 57px;
+  margin-right: 5px;
   /* 123.913% */
 }
 .main_wrapper main .main_content {
@@ -202,8 +203,11 @@ span {
   font-family: "Suisse Intl", sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
+}
+.main_wrapper main .main_content p span {
+  font-weight: 600;
 }
 .main_wrapper main .main_content .main_text_right {
   padding-left: 100px;
@@ -1564,6 +1568,7 @@ span {
     width: 104px;
     padding: 0;
     border-radius: 12px;
+    margin-right: 3px;
   }
   .main_wrapper main .main_content {
     position: relative;
