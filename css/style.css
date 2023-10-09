@@ -17,6 +17,10 @@
   font-weight: 600;
   font-style: normal;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -218,9 +222,9 @@ span {
   font-weight: 400;
   line-height: normal;
   transition: 0.3s linear;
-}
-.main_wrapper main .main_content .main_btn:hover {
-  transform: translateY(-5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .trust {
@@ -284,6 +288,12 @@ span {
   padding: 23px;
   border-radius: 20px;
   background: #FFF;
+}
+.trust_wrapper .trust_card .card_img img {
+  display: none;
+}
+.trust_wrapper .trust_card .card_img .desktop {
+  display: block;
 }
 .trust_wrapper .trust_card .trust_svg {
   transform: translateY(-80px);
@@ -814,6 +824,14 @@ span {
 }
 .comment .comment_slider .swiper-slide {
   width: 328px;
+  padding: 20px 17px;
+  border-radius: 10px;
+  background: #EAEBED;
+}
+.comment .comment_slider .swiper-slide img {
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
 }
 .comment .links {
   display: flex;
@@ -986,6 +1004,7 @@ span {
   font-weight: 600;
   line-height: normal;
   text-decoration-line: line-through;
+  padding-left: 29px;
 }
 .contact .contact_wrapper .contact_left span {
   width: 385px;
@@ -1205,13 +1224,21 @@ span {
   .trust .trust_wrapper .trust_bottom .trust_card h6 {
     margin: 0 auto;
   }
+  .trust .trust_wrapper .trust_top .trust_card .card_img img,
+  .trust .trust_wrapper .trust_bottom .trust_card .card_img img {
+    display: block;
+  }
+  .trust .trust_wrapper .trust_top .trust_card .card_img .desktop,
+  .trust .trust_wrapper .trust_bottom .trust_card .card_img .desktop {
+    display: none;
+  }
   .trust .trust_wrapper .trust_top .trust_btn,
   .trust .trust_wrapper .trust_bottom .trust_btn {
     display: block;
     margin: 0 auto;
   }
-  .trust .trust_wrapper .trust_top .trust_btn button,
-  .trust .trust_wrapper .trust_bottom .trust_btn button {
+  .trust .trust_wrapper .trust_top .trust_btn a,
+  .trust .trust_wrapper .trust_bottom .trust_btn a {
     cursor: pointer;
     width: 250px;
     height: 55px;
@@ -1224,6 +1251,9 @@ span {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .trust .trust_wrapper .trust_top .trust_card_bottom,
   .trust .trust_wrapper .trust_bottom .trust_card_bottom {
@@ -1393,6 +1423,7 @@ span {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    padding-left: 0;
   }
   .contact .contact_wrapper .contact_left span {
     padding: 8px 16px;
@@ -1528,8 +1559,11 @@ span {
     font-style: normal;
     font-weight: 600;
     line-height: 35px;
-    border-radius: 15px;
     margin-right: 0;
+    height: 36px;
+    width: 104px;
+    padding: 0;
+    border-radius: 12px;
   }
   .main_wrapper main .main_content {
     position: relative;
@@ -1750,9 +1784,12 @@ span {
   }
   .comment .comment_slider_wrapper .comment_slider .swiper-slide {
     width: 290px;
+    padding: 17px 14px;
+    border-radius: 8.6px;
   }
   .comment .comment_slider_wrapper .comment_slider .swiper-slide img {
-    width: 290px;
+    border-radius: 8.6px;
+    width: 100%;
   }
   .comment .links .link_1 {
     padding: 14px 21px 13px 22px;

@@ -31,6 +31,10 @@ $Suisse: 'Suisse Intl', sans-serif;
 $Source: 'Source Sans Pro', sans-serif;
 $Montserrat: 'Montserrat', sans-serif;
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -48,6 +52,7 @@ a,
 span {
     display: inline-block;
 }
+
 
 .main_container {
     max-width: 1250px;
@@ -250,10 +255,9 @@ span {
                 font-weight: 400;
                 line-height: normal;
                 transition: .3s linear;
-
-                &:hover {
-                    transform: translateY(-5px);
-                }
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
@@ -326,6 +330,14 @@ span {
             padding: 23px;
             border-radius: 20px;
             background: #FFF;
+
+            img {
+                display: none;
+            }
+
+            .desktop {
+                display: block;
+            }
         }
 
         .trust_svg {
@@ -927,6 +939,15 @@ span {
 
         .swiper-slide {
             width: 328px;
+            padding: 20px 17px;
+            border-radius: 10px;
+            background: #EAEBED;
+
+            img {
+                min-width: 100%;
+                max-width: 100%;
+                border-radius: 10px;
+            }
         }
     }
 
@@ -1118,6 +1139,7 @@ span {
                 font-weight: 600;
                 line-height: normal;
                 text-decoration-line: line-through;
+                padding-left: 29px;
             }
 
             span {
